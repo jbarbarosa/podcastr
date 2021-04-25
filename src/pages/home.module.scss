@@ -1,0 +1,170 @@
+.allEpisodes {
+  padding-bottom: 2rem;
+
+  table {
+    width: 100%;
+
+    td {
+      font-size: 0.875rem;
+
+      a {
+        color: var(--gray-800);
+        font-family: Lexend, sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.4rem;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      button {
+        background: var(--white);
+        border: 1px solid var(--gray-100);
+        border-radius: 0.5rem;
+        font-size: 0;
+        height: 2rem;
+        transition: filter 0.3s;
+        width: 2rem;
+
+        img {
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        &:hover {
+          filter: brightness(0.95)
+        }
+      }
+
+      img {
+        border-radius: 0.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+    
+    th {
+      color: var(--gray-200);
+      font: 500 0.75rem Lexend, sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--gray-100);
+      padding: 0.75rem 1rem;
+    }
+  }
+}
+
+.homepage {
+  height: calc(100vh - 6.5rem);
+  padding: 0 4rem;
+  overflow-y: scroll;
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.latestEpisodes {
+  ul {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+  
+    li {
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: 1.5rem;
+      display: flex;
+      padding: 1.25rem;
+      position: relative;
+
+      img {
+        border-radius: 1rem;
+        height: 6rem;
+        width: 6rem;
+      }
+
+      .episodeDetails {
+        flex: 1;
+        margin-left: 1rem;
+
+        a {
+          color: var(--gray-800);
+          display: block;
+          font-family: Lexend, sans-serif;
+          font-weight: 600;
+          line-height: 1.4rem;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        p {
+          font-size: 0.875rem;
+          margin-top: 0.5rem;
+          max-width: 70%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        span {
+          display: inline-block;
+          font-size: 0.875rem;
+          margin-top: 0.5rem;
+
+          &:last-child {
+            margin-left: 0.5rem;
+            padding-left: 0.5rem;
+            position: relative;
+
+            &::before {
+              background: #ddd;
+              border-radius: 2px;
+              content: "";
+              height: 4px;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 4px;
+            }
+          }
+        }
+      }
+
+      button {
+        background: var(--white);
+        border: 1px solid var(--gray-100);
+        border-radius: 0.675rem;
+        bottom: 2rem;
+        font-size: 0;
+        height: 2.5rem;
+        position: absolute;
+        transition: filter 0.3s;
+        right: 2rem;
+        width: 2.5rem;
+
+        img {
+          height: 1.5rem;
+          width:1.5rem;
+        }
+
+        &:hover {
+          filter: brightness(0.95)
+        }
+      }
+    }
+  }
+}
